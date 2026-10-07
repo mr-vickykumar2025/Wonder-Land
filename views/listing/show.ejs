@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h2>
+                <%= foundlisting.title %>
+            </h2>
+            <ul>
+                <img src="<%= foundlisting.image.url%> " class="card-img-top" alt="listing image">
+
+                <li>
+                    <%= foundlisting.description %>
+                </li>
+                <li>
+                    <%= foundlisting.price.toLocaleString("en-IN", { style: "currency" , currency: "INR" }) %>/night
+                </li>
+                <li>
+                    <%= foundlisting.location %>
+                </li>
+                <li>
+                    <%= foundlisting.country %>
+                </li>
+                <!-- <li><%= foundlisting.images %></li> -->
+
+                <form method="POST" action="/listings/<%= foundlisting._id%>?_method=DELETE">
+                    <a href="/listings/payment" class="btn btn-outline-success">Booked now </a>
+                    <button class="btn btn-outline-danger">Delete</button>
+                    <a class="btn btn-outline-info" href="/listings/<%= foundlisting._id%>/edit">Edit</a>
+                </form>
+
+            </ul>
+        </div>
+        <hr>
+        <div class="col-8 offset-2"><!-- review -->
+            <h4>leave a Review</h4>
+            <form action="/listings/<%=foundlisting._id%>/reviews" method="POST">
+                <div>
+                    <label for="range2" class="form-label">Rate the Hotel</label>
+                    <input  name="review[rating]"type="range" class="form-range" min="0" max="5" id="range2">
+                </div>
+                <div class="form-control">
+                    <label class="form-label form-control" for="comment">
+                        <textarea name="review[comment]" id="comment"
+                            placeholder="Please enter your comment "></textarea>
+                    </label>
+                </div>
+                <button class="btn btn-outline-info">submit</button>
+            </form>
+        </div>
+    </div>

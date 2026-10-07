@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column ;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+
+}
+
+.fa-cloudversify {
+    color: red;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links:hover {
+    text-decoration: underline;
+    color: #00c3ff;
+}
+
+.f-info-links ,.f-info-socials,.f-info-brand {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i {
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.card{
+    border: none !important;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    height:250px;
+    object-fit:cover;
+    border-radius:15px 15px 15px 15px;
+    margin-bottom: 20px;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition:0.3s;
+}
+
+.card-body{
+    padding:1rem;
+}
+
+.card-text{
+    font-size:1rem;
+}
+.listing-link{
+    text-decoration: none;
+    color: black;
+}
+.add-btn{
+    background-color: #ff4343;
+    border: none !important;
+}
+.edit-btn{
+    background-color: #ff4343;
+    border: none !important;
+}
